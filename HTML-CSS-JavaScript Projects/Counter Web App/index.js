@@ -1,21 +1,19 @@
-let y=document.getElementsByClassName("box")
-let num=0
-y[0].innerText=num
-y[2].innerText=num
-y[4].innerText=num
-let c=0;
-y[0].addEventListener("click", takea)
-function takea(){
-    let a=Number.parseInt(prompt("Enter your first no: "))
-    y[0].innerText=a;
-    c=c+a
+let inc=document.getElementsByTagName("h2")
+console.log(inc)
+let sum=0;
+inc[1].innerText=sum
+inc[0].addEventListener("click", increase)
+inc[2].addEventListener("click", decrease)
+function increase(){
+    sum++;
+    inc[1].innerText=sum
 }
-y[2].addEventListener("click", takeb)
-function takeb(){
-    let b=Number.parseInt(prompt("Enter your first no: "))
-    y[2].innerText=b;
-    c=c+b
+function decrease(){
+    sum--;
+    inc[1].innerText=sum
 }
-function hello(){
-    y[4].innerText=c;
+inc[3].addEventListener("click", resetVal)
+function resetVal(){
+    sum=0
+    inc[1].innerText=sum
 }
